@@ -3,23 +3,24 @@ import HelloWorld from "./components/HelloWorld.vue";
 import { attestationPdf } from "./data/pdf/BaseModel";
 import { ref } from "vue";
 const dataValue = {
-  name: "Direct Agence",
+  agence: "Direct Agence",
   police: "100000522",
-  rc: 1000,
-  incendie: 200,
-  dr: 4056,
-  dom: 8956,
-  vol: 5412,
-  bg: 4597,
+  rc: "Oui",
+  incendie: "Non",
+  dr: "Oui",
+  dom: "Non",
+  vol: "Oui",
+  bg: "Non",
   dateDebut: "20/05/2024",
   dateFin: "20/05/2024",
   genre: "M",
-  type: "Auto",
-  marque: "Toyota",
+  type: "Carina E",
+  marque: "Toyota ",
   immat: "AASD50",
   id: 1536974,
   numberPolice: 5003697,
-  infos: 'Jon Doe Libreville Gabon '
+  infos: "Jon Doe  ",
+  adress: "Libreville Gabon ",
 };
 </script>
 

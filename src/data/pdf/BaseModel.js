@@ -8,131 +8,98 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
  * @param {Object} e
  */
 export const attestationPdf = async (e) => {
-  console.log(e);
   const docDefinition = {
     pageSize: "A4",
     pageOrientation: "landscape",
-    pageMargins: [100, 320, 20, 100],
-
+    pageMargins: [90, 150, 20, 50],
     content: [
-      
+    //   {
+    //     text: e["infos"],
+    //     relativePosition: { x: 460, y: 55 },
+    //   },
+    //   {
+    //     text: e["agence"],
+    //     absolutePosition: { x: 380, y: 230 },
+    //   },
+    //   {
+    //     text: e["adress"],
+    //     absolutePosition: { x: 500, y: 230 },
+    //   },
+    //   {
+    //     text: e["police"],
+    //     absolutePosition: { x: 290, y: 250 },
+    //   },
+    //   {
+    //     stack: [
+    //       {
+    //         text: e["rc"],
+    //         absolutePosition: { x: 290, y: 280 },
+    //       },
+    //       {
+    //         text: e["incendie"],
+    //         absolutePosition: { x: 290, y: 310 },
+    //       },
+    //       {
+    //         text: e["dateDebut"],
+    //         absolutePosition: { x: 270, y: 330 },
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     stack: [
+    //       {
+    //         text: e["dr"],
+    //         absolutePosition: { x: 370, y: 280 },
+    //       },
+    //       {
+    //         text: e["dom"],
+    //         absolutePosition: { x: 370, y: 310 },
+    //       },
+    //       {
+    //         text: e["dateFin"],
+    //         absolutePosition: { x: 385, y: 330 },
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     stack: [
+    //       {
+    //         text: e["vol"],
+    //         absolutePosition: { x: 450, y: 280 },
+    //       },
+    //       {
+    //         text: e["bg"],
+    //         absolutePosition: { x: 450, y: 310 },
+    //       },
+    //     ],
+    //   },
       {
-        text: e["name"],
-        style: "anotherStyle",
+        text: e["genre"],
+        absolutePosition: { x: 500, y: 330 },
       },
-      {
-        text: e["infos"],
-        style: "anotherStyle2",
-      },
-      {
-        text: e["id"],
-        style: "anotherStyle3",
-      },
-
-        {
-          columns: [
-            {
-              width: "40%",
-              stack: [
-                {
-                  text: e["police"],
-                  margin: [50, 10, 0, 5],
-                },
-                {
-                  columns: [
-                    {
-                      stack: [
-                        {
-                          text: e["rc"],
-                          margin: [0, 15, 0, 5],
-                        },
-                        {
-                          text: e["incendie"],
-                          margin: [0, 15, 0, 5],
-                        },
-                      ],
-                    },
-                    {
-                      stack: [
-                        {
-                          text: e["dr"],
-                          margin: [0, 15, 0, 5],
-                        },
-                        {
-                          text: e["dom"],
-                          margin: [0, 15, 0, 5],
-                        },
-                      ],
-                    },
-                    {
-                      stack: [
-                        {
-                          text: e["vol"],
-                          margin: [0, 15, 0, 5],
-                        },
-                        {
-                          text: e["bg"],
-                          margin: [0, 15, 0, 5],
-                        },
-                      ],
-                    },
-                  ],
-                },
-                {
-                  text: `${e["dateDebut"]}   ${e["dateFin"]}`,
-                  margin: [0, 50, 0, 5],
-                },
-              ],
-            },
-            {
-              width: "*",
-              stack: [
-                {
-                  stack: [
-                    {
-                      text: `${e["genre"]}      ${e["type"]}     ${e["marque"]}     ${e["immat"]}`,
-                      margin: [10, 180, 0, 5],
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              // % width
-              width: "20%",
-              stack: [
-
-                {
-                  text: `${e["dateDebut"]}   ${e["dateFin"]}`,
-                  margin: [0, 15, 0, 5],
-                },
-                {
-                  text: e["numberPolice"],
-                  margin: [0, 15, 0, 5],
-                },
-              ],
-            },
-          ],
-          columnGap: 10,
-        },
+    //   {
+    //     text: e["type"],
+    //     absolutePosition: { x: 550, y: 350 },
+    //   },
+    //   {
+    //     text: e["marque"],
+    //     absolutePosition: { x: 670, y: 350 },
+    //   },
+    //   {
+    //     text: e["immat"],
+    //     absolutePosition: { x: 730, y: 350 },
+    //   },
     ],
     styles: {
-      header: {
-        fontSize: 22,
-        bold: true,
-      },
       anotherStyle: {
-        italics: true,
         alignment: "left",
-        margin: [0, 30, 0, 5],
+        margin: [0, 0, 0, 5],
       },
       anotherStyle2: {
-        italics: true,
         alignment: "center",
-        margin: [0, -100, 0, 5],
+        margin: [0, 50, 0, 5],
       },
       anotherStyle3: {
-        italics: true,
         alignment: "right",
         margin: [0, -30, 0, 5],
       },
