@@ -1,7 +1,7 @@
 <script setup>
 import HelloWorld from "./components/HelloWorld.vue";
 import { attestationPdf } from "./data/pdf/BaseModel";
-import { ref } from "vue";
+import { cartePdf } from "./data/pdf/carte";
 const dataValue = {
   agence: "Direct Agence",
   police: "100000522",
@@ -22,6 +22,21 @@ const dataValue = {
   infos: "Jon Doe  ",
   adress: "Libreville Gabon ",
 };
+
+const dataValueCarte = {
+  nomAdAssure: "mba ndong",
+  NomAdSoCiete: "NSIA ",
+  NumChassis: "2020",
+  policeOriginale: 888999,
+  usagecat: "transport personnel",
+  dateFin: "20/05/2024",
+  dateDebut: "20/05/2024",
+  police: 1225,
+  BureauEmetteur: "Glass",
+  assureur: "NSIA",
+  marquetype: "toyota bus",
+  immatriculation: 100000522,
+};
 </script>
 
 <template>
@@ -34,7 +49,10 @@ const dataValue = {
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" /> -->
-  <button @click.prevent="attestationPdf(dataValue)">
+  <!-- <button @click.prevent="attestationPdf(dataValue)">
+    <span>Clique ici</span>
+  </button> -->
+  <button @click.prevent="cartePdf(dataValueCarte)">
     <span>Clique ici</span>
   </button>
 </template>
