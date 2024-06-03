@@ -2,6 +2,7 @@
 import HelloWorld from "./components/HelloWorld.vue";
 import { attestationPdf } from "./data/pdf/BaseModel";
 import { cartePdf } from "./data/pdf/carte";
+import { conditionPDF } from "./data/pdf/condition"
 const dataValue = {
   agence: "Direct Agence",
   police: "100000522",
@@ -52,7 +53,7 @@ const dataValueCarte = {
   <!-- <button @click.prevent="attestationPdf(dataValue)">
     <span>Clique ici</span>
   </button> -->
-  <button @click.prevent="cartePdf(dataValueCarte)">
+  <button @click.prevent="conditionPDF()">
     <span>Clique ici</span>
   </button>
 </template>
